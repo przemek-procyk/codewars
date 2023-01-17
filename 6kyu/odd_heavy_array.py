@@ -24,20 +24,7 @@ def is_odd_heavy(arr):
         return False
 
 
-print(is_odd_heavy([0, 2, 19, 4, 4]))
-
-print(is_odd_heavy([11, 4, 9, 2, 3, 10]))
-
-print(is_odd_heavy([11, 4, 9, 2, 8]))
-
-print(is_odd_heavy([0, 0, 0, 0, 0]))
-
-print(is_odd_heavy([1,-2,-1,2]))
-
-print(is_odd_heavy([1]))
-
-
-def isOddHeavy(arr):
+def is_odd_heavy(arr):
     try:
         min_odd = min(filter(lambda x: x % 2 != 0, arr))
     except:
@@ -51,7 +38,7 @@ def isOddHeavy(arr):
     return min_odd - max_even > 0
 
 
-def isOddHeavy(arr):
+def is_odd_heavy(arr):
     maxEven = max(filter(lambda n: n%2 == 0, arr), default=float("-inf"))
     minOdd  = min(filter(lambda n: n%2 == 1, arr), default=float("-inf"))
     return maxEven < minOdd
